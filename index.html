@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Москва Тур - Экскурсии по столице</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">
+                    <i class="fas fa-landmark"></i>
+                    МоскваТур
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#tours">Экскурсии</a></li>
+                    <li><a href="#places">Места</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <section id="home" class="hero">
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Откройте <span class="highlight">Москву</span> заново</h1>
+                    <p class="hero-subtitle">Экскурсии от местных гидов • Секретные места • Комфортные маршруты</p>
+                    <div class="hero-buttons">
+                        <a href="#tours" class="btn btn-primary">Выбрать экскурсию</a>
+                        <a href="#gallery" class="btn btn-secondary">Смотреть фото</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>50+ мест</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-users"></i>
+                            <span>1000+ туристов</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-star"></i>
+                            <span>4.9/5 рейтинг</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Популярные экскурсии -->
+    <section id="tours" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Популярные экскурсии</h2>
+                <p class="section-subtitle">Лучшие маршруты по мнению наших гостей</p>
+            </div>
+            
+            <div class="tours-grid">
+                <div class="tour-card">
+                    <div class="tour-image" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/tour1.jpg');">
+                        <span class="tour-badge">Хит сезона</span>
+                        <div class="tour-price">от 1 500 ₽</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Красная площадь и Кремль</h3>
+                        <p>Знакомство с главными символами Москвы</p>
+                        <div class="tour-info">
+                            <span><i class="fas fa-clock"></i> 3 часа</span>
+                            <span><i class="fas fa-user-friends"></i> До 15 человек</span>
+                        </div>
+                        <button class="btn-tour">Подробнее</button>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/tour2.jpg');">
+                        <span class="tour-badge">Новинка</span>
+                        <div class="tour-price">от 2 000 ₽</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Тайны старых переулков</h3>
+                        <p>Прогулка по историческим районам Москвы</p>
+                        <div class="tour-info">
+                            <span><i class="fas fa-clock"></i> 4 часа</span>
+                            <span><i class="fas fa-user-friends"></i> До 10 человек</span>
+                        </div>
+                        <button class="btn-tour">Подробнее</button>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/tour3.jpg');">
+                        <div class="tour-price">от 2 500 ₽</div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Ночная Москва</h3>
+                        <p>Вечерняя экскурсия по освещенным улицам</p>
+                        <div class="tour-info">
+                            <span><i class="fas fa-clock"></i> 2.5 часа</span>
+                            <span><i class="fas fa-user-friends"></i> До 12 человек</span>
+                        </div>
+                        <button class="btn-tour">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Знаковые места -->
+    <section id="places" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Знаковые места Москвы</h2>
+                <p class="section-subtitle">Must-see достопримечательности столицы</p>
+            </div>
+
+            <div class="places-tabs">
+                <button class="tab-btn active" data-tab="historical">Исторические</button>
+                <button class="tab-btn" data-tab="cultural">Культурные</button>
+                <button class="tab-btn" data-tab="modern">Современные</button>
+            </div>
+
+            <div class="places-content">
+                <div class="tab-pane active" id="historical">
+                    <div class="place-card">
+                        <div class="place-icon">
+                            <i class="fas fa-fort-awesome"></i>
+                        </div>
+                        <h3>Московский Кремль</h3>
+                        <p>Сердце России, резиденция президента, исторический комплекс с соборами и музеями.</p>
+                    </div>
+                    <div class="place-card">
+                        <div class="place-icon">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <h3>Храм Василия Блаженного</h3>
+                        <p>Символ Москвы, построенный в XVI веке, объект Всемирного наследия ЮНЕСКО.</p>
+                    </div>
+                    <div class="place-card">
+                        <div class="place-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>ГУМ</h3>
+                        <p>Исторический торговый комплекс на Красной площади, памятник архитектуры.</p>
+                    </div>
+                </div>
+                
+                <div class="tab-pane" id="cultural">
+                    <div class="place-card">
+                        <div class="place-icon">
+                            <i class="fas fa-theater-masks"></i>
+                        </div>
+                        <h3>Большой театр</h3>
+                        <p>Один из крупнейших в России и один из самых значительных в мире театров оперы и балета.</p>
+                    </div>
+                    <div class="place-card">
+                        <div class="place-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Третьяковская галерея</h3>
+                        <p>Главный музей национального искусства России, отражающий её уникальный путь.</p>
+                    </div>
+                    <div class="place-card">
+                        <div class="place-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>РГБ (Ленинка)</h3>
+                        <p>Крупнейшая публичная библиотека в России и континентальной Европе.</p>
+                    </div>
+                </div>
+                
+                <div class="tab-pane" id="modern">
+                    <div class="place-card">
+                        <div class="place-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Москва-Сити</h3>
+                        <p>Деловой район с небоскрёбами, символ современной Москвы.</p>
+                    </div>
+                    <div class="place-card">
+                        <div class="place-icon">
+                            <i class="fas fa-park"></i>
+                        </div>
+                        <h3>Зарядье</h3>
+                        <p>Современный парк у стен Кремля с инновационными архитектурными решениями.</p>
+                    </div>
+                    <div class="place-card">
+                        <div class="place-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3>Московское кино</h3>
+                        <p>Современные кинотеатры и киноплощадки столицы.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Галерея Москвы</h2>
+                <p class="section-subtitle">Красота столицы в фотографиях</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('images/kremlin.jpg');">
+                    <div class="gallery-overlay">
+                        <h4>Московский Кремль</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('images/arbat.jpg');">
+                    <div class="gallery-overlay">
+                        <h4>Старый Арбат</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('images/moscow-city.jpg');">
+                    <div class="gallery-overlay">
+                        <h4>Москва-Сити</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('images/vdnkh.jpg');">
+                    <div class="gallery-overlay">
+                        <h4>ВДНХ</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Забронируйте экскурсию</h2>
+                <p class="section-subtitle">Оставьте заявку и мы свяжемся с вами</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>Телефон</h4>
+                        <p>+7 (495) 123-45-67</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>info@moscow-tour.ru</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Адрес</h4>
+                        <p>Москва, ул. Тверская, 15</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <h4>Часы работы</h4>
+                        <p>Ежедневно 9:00-21:00</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="booking-form">
+                    <h3>Форма заявки</h3>
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Ваш email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Номер телефона" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Выберите экскурсию</option>
+                            <option value="kremlin">Красная площадь и Кремль</option>
+                            <option value="old-streets">Тайны старых переулков</option>
+                            <option value="night">Ночная Москва</option>
+                            <option value="individual">Индивидуальная экскурсия</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" placeholder="Количество человек" min="1" max="20" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                    <p class="form-message" id="form-message"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-landmark"></i>
+                    МоскваТур
+                </div>
+                <p>© 2023 МоскваТур. Все права защищены.</p>
+                <p>Экскурсии по Москве от местных гидов</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
